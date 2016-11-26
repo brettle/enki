@@ -11,7 +11,7 @@ Version:        %{source_major}.%{source_minor}.%{source_patch}
 
 # Update the following line with the git commit hash of the revision to use
 # for example by running git show-ref -s --tags RELEASE_TAG
-%global commit a24aa3b7910000e622b5d4e3396ddf2e2d3816ff
+%global commit 9bd669e962c3c5725a93617a7c5f57470a193a8f
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 # Update the following line to set commit_is_tagged_as_source_release to 0 if
@@ -29,7 +29,7 @@ Version:        %{source_major}.%{source_minor}.%{source_patch}
 # release version (i.e. the "Version:" line above refers to a future
 # source release version), then set the number to 0.0. Otherwise, leave the
 # the number unchanged. It will get bumped when you run rpmdev-bumpspec.
-Release:        0.6%{?snapshot}%{?dist}
+Release:        0.7%{?snapshot}%{?dist}
 
 Summary:        An open source robot simulator written in C++
 
@@ -148,6 +148,9 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Nov 26 2016 Dean Brettle <dean@brettle.com> - 2.0.0-0.7.20161126git9bd669e
+- Synced with upstream aseba-1.5.4
+
 * Fri Sep 11 2015 Dean Brettle <dean@brettle.com> - 2.0.0-0.6.20150911gita24aa3b
 - Sync with 2.0-pre.20140520
 
